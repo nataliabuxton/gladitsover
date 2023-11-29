@@ -1,0 +1,290 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    margin: 0;
+    font-family: 'Inika', serif;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0px auto;
+    margin-top: 10px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+nav {
+    margin: 40px;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    gap: 8.3em;
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: 2rem;
+    position: relative;
+}
+nav ul li a :active {
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase;
+    font-size: 2rem;
+    position: relative;
+    
+}
+
+nav ul li a::before{
+    position: absolute;
+    content: "";
+    width: 0%;
+    height: 1px;
+    border-bottom: 2px solid rgba(41, 37, 37, 0.413);
+    bottom: -6px;
+    transition: width .3s;
+
+}
+
+nav ul li a:hover::before{
+    position: absolute;
+    content: "";
+    width: 35%;
+    height: 1px;
+    border-bottom: 2px solid rgba(41, 37, 37, 0.491);
+    bottom: -6px;
+    transition: width .3s;
+}
+
+/* Hero */
+
+/* Leftcol */
+
+main {
+    display: flex;
+    gap: 10.8em;
+}
+
+.left-col {  
+    width: 45%;
+}
+
+.right-col { 
+    flex-grow: 1;
+}
+
+h1 {
+    font-size: 6.6rem;
+    text-align: center;
+    font-family: 'kaisei opti', sans-serif;
+    font-weight: normal;
+    margin: 0;
+    opacity: 70%;
+}
+
+
+h1:hover{
+    opacity: 100%;
+    transition: 2s ease-in-out;
+}
+
+p {
+    font-size: 1.4rem;
+    text-align: center;
+    font-family: 'Inika', sans-serif;
+    font-weight: normal;
+    margin: 0;
+}
+
+.subheading {
+    font-size: 1.9rem;
+    font-family: 'inika' , sans-serif;
+    font-weight: normal;
+    text-align: center;
+}
+
+.cta-btns {
+    display: flex;
+    gap: 2em;
+    margin: 5em 0;
+}
+
+.btn-primary {
+    display: flex;
+    width: 50%;
+    height: 80%;
+    padding: 16px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    border-radius: 20em;
+    background: var(--Btn-Colour, #20201E);
+    color: #fff;
+    font-family: Inika;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-transform: uppercase; 
+    margin: 0; 
+    text-decoration: none;
+}
+
+.btn-primary:hover{
+    border-radius: 20em;
+    background: #646764;
+    font-size: 1.8rem;
+    transition: .3s ease-in-out;
+}
+
+.btn-secondary {
+    font-family: Inika;
+    font-size: 1.8rem;
+    font-style: normal;
+    font-weight: light;
+    line-height: normal;
+    text-transform: uppercase; 
+    display: block;
+    margin: 0; 
+    padding: 16px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: black;
+}
+
+.btn-secondary :hover{
+    text-decoration: underline;
+}
+
+.btn-secondary svg{
+    width: 10px;
+    padding-left: .5em;
+}
+
+.btn-secondary svg:hover{
+    transform: translateX(10px);
+}
+
+p .number50k {
+    font-size: 2.6rem;
+    padding-bottom: 15px;
+    font-weight: lighter;
+}
+
+.news{
+    display: flex;
+    gap: 3em;
+    padding: 5em;
+    border: 1px solid;
+    border-radius: 2rem;
+    color: #fff;
+    position: relative;
+    background-color: rgba(34, 30, 25, 0.75);
+    
+}
+
+.news::before{
+    position: absolute;
+    content: "";
+    background: url('');
+    width: 100px;
+    height: 100px;
+    top: -20px;
+    left: -20px;
+    z-index: 2;
+}
+
+.news .details{
+    margin-top: 30px;
+    margin-left: 10px;
+    font-weight: normal;
+}
+
+/* right col gallery */
+
+.right-col {
+    display: grid;
+    gap: 2.3em;
+    grid-template-columns: repeat(1,auto);
+    grid-template-areas: 
+    "right left"
+    "right bottom";
+}
+
+.card {
+    border-radius: .6em;
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    background-size: 200%;
+    opacity: 80%;
+}
+
+.card:hover{
+    opacity: 100%;
+    transition: .3s ease-in-out;
+}
+
+.card1 {
+    background-image: url('../imgs/walks.jpg');
+    align-items: end;
+    
+
+}
+.card2 {
+    background-image: url('../imgs/stonepath.jpg');
+    align-items: end;
+
+}
+.card3 {
+    background-image: url('../imgs/pagoda.jpg');
+    align-items: end;
+
+}
+.card4 {
+    
+    background-image: url('../imgs/views.jpg');
+    align-items: end;
+
+}
+
+.card-details {
+    background: rgba(32, 30, 27, 0.99);
+    border-radius: .8em;
+    padding: 2em;
+    height: 35%;   
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 2;
+    opacity: 80%;
+}
+
+
+.card-details a{
+    color: white;
+    text-decoration: none;
+    font-family: 'Inika';
+    font-size: 1.6rem;
+    font-weight: normal;
+    text-align: center right;
+}
+
+
+
+
